@@ -52,3 +52,9 @@ surveys = {
     "satisfaction": satisfaction_survey,
     "personality": personality_quiz,
 }
+
+# To get question:
+# satisfaction_survey.questions[1].question
+
+# To get choices:
+# satisfaction_survey.questions[1].choices
