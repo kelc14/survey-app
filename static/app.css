@@ -20,13 +20,14 @@ body {
 
 body .bg-container {
   background-color: var(--theme-main-color);
-  border-top-left-radius: 100px;
+  border-top-right-radius: 200px;
   min-height: 100vh;
 }
 
 h1,
 h2 {
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 15px;
   text-transform: uppercase;
   color: var(--font-main-color);
 }
@@ -39,14 +40,31 @@ form input {
   padding-left: 10px;
 }
 
-.survey button {
+.survey button,
+.btn {
   background-color: var(--theme-secondary-color);
   text-transform: uppercase;
   color: var(--font-main-color);
-  padding: 10px;
+  padding: 20px;
+  margin: 15px;
   border-radius: 10px;
   border: 1px;
   box-shadow: var(--box-shadow);
+}
+
+/* thank you page */
+#survey-responses {
+  background-color: var(--theme-secondary-color);
+  color: var(--font-main-color);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  border: 1px;
+}
+
+#survey-responses li {
+  text-align: left;
+  line-height: 2.5;
 }
 
 /* flash message */
@@ -62,7 +80,7 @@ form input {
 
 /* hamburger */
 
-.navbar {
+/* .navbar {
   position: absolute;
   top: 18px;
   left: 18px;
@@ -199,4 +217,4 @@ form input {
 
 .nav-container input[type="checkbox"]:checked ~ .logo {
   display: none;
-}
+} */

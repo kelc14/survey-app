@@ -2,10 +2,25 @@
 block header %}
 <h2>Thank you for submitting your responses.</h2>
 {% endblock %} {% block content %}
+
+<div id="survey-responses">
+  <h3>Your Survey Responses for {{ session['title'] }}</h3>
+  <ul>
+    {% for response in responses%}
+    <li>
+      <b>{% for key in response.keys() %} {{key}} {% endfor %}</b>{% for value
+      in response.values() %}{{value}}{% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
 <p>
   Thank you for being a valued customer. We appreciate your feedback on your
   experience shopping with us today. Please reach out to information@email.com
   with any questions or concerns.
 </p>
+
+<a href="/" class="btn">Take Another Survey</a>
 
 {% endblock %}

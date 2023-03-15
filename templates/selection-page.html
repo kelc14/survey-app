@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %} Choose Your Survey {% endblock %} {%
+block header %}
+<h1>CHOOSE YOUR SURVEY TO BEGIN!</h1>
+{% endblock %} {% block content %}
+<form method="post">
+  {% for survey in surveys %}
+  <button type="submit" name="survey_type" value="{{survey}}">
+    {{survey}}
+  </button>
+  {% endfor %}
+</form>
+{% endblock %}

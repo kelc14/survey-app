@@ -1,9 +1,9 @@
-{% extends "base.html" %} {% block title %} Question {{num}} {% endblock %} {%
-block header %}
-<h2>Question: {{num + 1}}</h2>
+{% extends "base.html" %} {% block title %} Question {{question_index+1}} {%
+endblock %} {% block header %}
+<h2>Question: {{question_index + 1}}</h2>
 {% endblock %} {% block content%}
 
-<form action="{{route_name}}" method="POST">
+<form action="/answer" method="POST">
   <p>{{question}}</p>
   {% for choice in choices %}
   <input

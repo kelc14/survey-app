@@ -1,10 +1,10 @@
-{% extends "base.html" %} {% block title %} Home {% endblock %} {% block content
+{% extends "base.html" %} {% block title %} Home {% endblock %} {% block header
 %}
+<h1>{{ session['title'] }}</h1>
+{% endblock %} {% block content %}
+<p>{{ session['instructions'] }}</p>
 
-<h1>{{title}}</h1>
-<section class="container survey">
-  <p>{{instructions}}</p>
-  <a href="/question/0"><button>Begin Survey</button></a>
-</section>
-
+<form action="/start" method="post">
+  <button type="submit">Begin Survey</button>
+</form>
 {% endblock %}
